@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//tianzixiaotanzhong.github.io">
-  <title>Archives | wangmumu的博客</title>
+  <title>hexo博客yilia主题利用gitalk插件实现评论功能 | wangmumu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wangmumu的博客">
-<meta property="og:url" content="archives/index.html">
+  <meta name="description" content="hexo博客yilia主题利用gitalk插件实现评论功能目录 目录 前言 正文 结尾   前言早就想捣鼓个人博客，但一直没有时间与精力，正巧撞上病毒时代，加上老师布置下任务，于是我的第一篇个人博客就诞生了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客yilia主题利用gitalk插件实现评论功能">
+<meta property="og:url" content="2020/04/02/hexo%E5%8D%9A%E5%AE%A2yilia%E4%B8%BB%E9%A2%98%E5%88%A9%E7%94%A8gitalk%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="wangmumu的博客">
+<meta property="og:description" content="hexo博客yilia主题利用gitalk插件实现评论功能目录 目录 前言 正文 结尾   前言早就想捣鼓个人博客，但一直没有时间与精力，正巧撞上病毒时代，加上老师布置下任务，于是我的第一篇个人博客就诞生了">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-02T08:50:26.000Z">
+<meta property="article:modified_time" content="2020-04-02T12:33:52.589Z">
 <meta property="article:author" content="wangmumu">
 <meta property="article:tag" content="嵌入式">
 <meta property="article:tag" content="开发者">
@@ -158,76 +162,203 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hexo博客yilia主题利用gitalk插件实现评论功能" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      hexo博客yilia主题利用gitalk插件实现评论功能
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="2020/04/02/hexo博客yilia主题利用gitalk插件实现评论功能/" class="archive-article-date">
+
+        
+        <a href="2020/04/02/hexo博客yilia主题利用gitalk插件实现评论功能/" class="archive-article-date">
   	<time datetime="2020-04-02T08:50:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="2020/04/02/hexo博客yilia主题利用gitalk插件实现评论功能/">hexo博客yilia主题利用gitalk插件实现评论功能</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="hexo博客yilia主题利用gitalk插件实现评论功能"><a href="#hexo博客yilia主题利用gitalk插件实现评论功能" class="headerlink" title="hexo博客yilia主题利用gitalk插件实现评论功能"></a>hexo博客yilia主题利用gitalk插件实现评论功能</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a><a id="目录">目录</a></h2><ul>
+<li><a href="#目录">目录</a></li>
+<li><a href="#前言">前言</a></li>
+<li><a href="#正文">正文</a></li>
+<li><a href="#结尾">结尾</a> </li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><a id="前言">前言</a></h2><p>早就想捣鼓个人博客，但一直没有时间与精力，正巧撞上病毒时代，加上老师布置下任务，于是我的第一篇个人博客就诞生了 </p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>虽然我有csdn账号，但直接用csdn显然和合我的心意，一是界面丑逼格不高，二是有诸多限制，那时我还没意识到，我将步入一个个大坑之中……</p>
+<p>关于之前怎么装的hexo与yilia主题，这里就不再多赘述，网上教程很多，大体也都没什么问题，我就针对一下开通评论功能，讲一下我的方法</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a><a id="正文">正文</a></h2><p>刚开始我是准备用valine作为评论系统，但是valine的评论系统是放在LeadCloud上面的，网上的教程很多都不全，有些博文详细讲了在hexo主题上的配置，但是对于LeadCloud上的部署却一笔带过，加上valine版本更新，有些老一点的文章内容也不一定能直接拿来用，半天的操作下来，博客竟然一点变化也没有，而我也硬是没有头绪问题在哪儿……  </p>
+<p>后来尝试了gitment，有点效果，但是一直报错，还是没办法使用评论功能，后来才知道gitment的开发者早就停止了更新，现在这个情况据说是他的服务器不能用了，晕死……</p>
+<p>兜兜转转下，来最终尝试了gitalk，下面是步骤</p>
+<ol>
+<li>要在我们主题的的路径下添加一个<strong>gitalk.ejs</strong>文件<br>路径为  <strong>\themes\yilia\layout_partial\post</strong><br>yilia是我用的主题，如果有用别的主题的就用自己主题的路径<br>下面是文件的代码: </li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitalk-container"</span> <span class="attr">style</span>=<span class="string">"padding: 0px 30px 0px 30px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="handlebars"><span class="xml">if(<span class="tag">&lt;<span class="name">%=theme.gitalk.enable%</span>&gt;</span>)&#123;</span></span></span><br><span class="line"><span class="actionscript">	<span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk(&#123;</span></span><br><span class="line"><span class="actionscript">  	clientID: <span class="string">'&lt;%=theme.gitalk.ClientID%&gt;'</span>,</span></span><br><span class="line"><span class="actionscript">  	clientSecret: <span class="string">'&lt;%=theme.gitalk.ClientSecret%&gt;'</span>,</span></span><br><span class="line"><span class="actionscript">  	repo: <span class="string">'&lt;%=theme.gitalk.repo%&gt;'</span>,</span></span><br><span class="line"><span class="actionscript">  	owner: <span class="string">'&lt;%=theme.gitalk.githubID%&gt;'</span>,</span></span><br><span class="line"><span class="actionscript">  	admin: [<span class="string">'&lt;%=theme.gitalk.adminUser%&gt;'</span>],</span></span><br><span class="line"><span class="actionscript">  	id: <span class="string">'&lt;%= page.date %&gt;'</span>,</span></span><br><span class="line"><span class="actionscript">  	distractionFreeMode: <span class="string">'&lt;%=theme.gitalk.distractionFreeMode%&gt;'</span></span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="actionscript">gitalk.render(<span class="string">'gitalk-container'</span>)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>修改 <strong>\themes\yilia\source-src\css</strong> 下的comment.scss<br>用下面的代码替换<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#disqus_thread</span>, <span class="selector-class">.duoshuo</span>, <span class="selector-class">.cloud-tie-wrapper</span>, <span class="selector-id">#SOHUCS</span>, <span class="selector-id">#gitment-ctn</span>, <span class="selector-id">#gitalk-container</span> &#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span> <span class="number">30px</span> !important;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#SOHUCS</span> &#123;</span><br><span class="line">	<span class="selector-id">#SOHU_MAIN</span> <span class="selector-class">.module-cmt-list</span> <span class="selector-class">.block-cont-gw</span> &#123;</span><br><span class="line">		<span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#c8c8c8</span> !important;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line"><span class="number">3</span>. 在 **theme\yilia\layout\_partial**目录下的<span class="selector-tag">article</span>.ejs文件内新增gitalk相关的配置代码:</span><br></pre></td></tr></table></figure>
+&lt;% if(theme.gitalk.enable){ %&gt;<br>&lt;%- partial(‘post/gitalk’, {<br>   key: post.slug,<br>   title: post.title,<br>   url: config.url+url_for(post.path)<br> }) %&gt;<br>&lt;% } %&gt;<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">注意代码的位置，像我用的yilia主题,代码放在这个位置  </span><br><span class="line">![<span class="string">代码</span>](<span class="link">https://s1.ax1x.com/2020/04/02/GYNKpR.jpg</span>)</span><br><span class="line">最后那一块是gitment的代码，是yilia主题自带的，我将需要新增的代码放在了它的前面  </span><br><span class="line"></span><br><span class="line"><span class="bullet">4. </span>在我的yilia主题配置文件(_config.yml)中新增gitalk相关的配置(yilia这里可以将gitment的配置注释掉)：</span><br></pre></td></tr></table></figure>
+gitalk:<br>enable: true #是否开启<br>githubID: xxx #你的Github用户名<br>repo: xxx.github.io #Github仓库名称<br>ClientID:  #创建的Application ClientID<br>ClientSecret:  #创建的Application ClientSecret<br>adminUser: xxx # 评论初始化账户(GitHub ID)<br>distractionFreeMode: true # 是否开启分心自由模式 也就是免打扰<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">上面的用户名等信息，当然都是填你自己的，既然选择了hexo博客，自然不可能没有连github账号都没有，Gitalk 需要一个 Github Application，也就是需要填的ClientID和ClientSecret，若是没有，可以去[<span class="string">这个网站</span>](<span class="link">https://github.com/settings/applications/new</span>)申请  </span><br><span class="line"><span class="bullet">* </span>第一个 Application name 是应用名称</span><br><span class="line"><span class="bullet">* </span>第二个 Homepage URL 是主页地址</span><br><span class="line"><span class="bullet">* </span>第三个 是描述</span><br><span class="line"><span class="bullet">* </span>第四个 是回调地址 写你博客的地址</span><br><span class="line"></span><br><span class="line"><span class="bullet">5. </span>提交更新</span><br></pre></td></tr></table></figure>
+hexo clean<br>hexo g<br>hexo d<pre><code>这样hexo博客就有一个评论功能啦~~~  
+![我的评论](https://s1.ax1x.com/2020/04/02/GYrTfO.jpg)
+</code></pre></li>
+</ol>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a><a id="结束">结束</a></h2><p>虽然有了一个简单的评论功能,但是gitalk似乎并不稳定，经常会出现 network erroe 错误，可能是因为不是大陆的的原因???<br>以后有机会还是要找一个更快更稳定的评论方案</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http:2020/04/02/hexo博客yilia主题利用gitalk插件实现评论功能/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="2020/04/01/demo/" class="archive-article-date">
-  	<time datetime="2020-04-01T11:19:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="2020/04/01/demo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">demo</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="2020/04/01/demo/">demo</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
+  
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
   
-    </div></section>
-  
+    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '8643e1bed5c73426167c',
+  	clientSecret: 'b96e007ec1ed57a499f15e4fca75a56ad2829637',
+  	repo: 'tianzixiaotanzhong.github.io',
+  	owner: 'tianzixiaotanzhong',
+  	admin: ['tianzixiaotanzhong'],
+  	id: 'Thu Apr 02 2020 16:50:26 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container')
+}
+</script>
 
     
+
+  
 
 
           </div>
@@ -250,8 +381,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
