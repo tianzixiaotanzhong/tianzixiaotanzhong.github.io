@@ -180,28 +180,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="小米路由器4C安装clash实现XX上网"><a href="#小米路由器4C安装clash实现XX上网" class="headerlink" title="小米路由器4C安装clash实现XX上网"></a>小米路由器4C安装clash实现XX上网</h1><h2 id="目录-目录"><a href="#目录-目录" class="headerlink" title="目录 {目录}"></a>目录 {目录}</h2><p><a href="#目录">目录</a></p>
-<p><a href="#前言">前言</a></p>
-<p><a href="#正文">正文</a></p>
-<p><a href="#一、开启ssh">一、开启ssh</a></p>
-<p><a href="#二、登录root_shell">二、登录root shell</a></p>
-<p><a href="#三、安装ShellClash">三、安装ShellClash</a></p>
-<p><a href="#四、使用ShellClash">四、使用ShellClash</a></p>
-<p><a href="#结尾">结尾</a></p>
-<h2 id="前言-前言"><a href="#前言-前言" class="headerlink" title="前言 {前言}"></a>前言 {前言}</h2><p>虽然clash客户端很方便，但家里使用的办公与通信电子设备比较多，当有访问外网需求时，都需要在后台挂着clash，这让我想直接在路由器上实现XX上网，做到一劳永逸。既省去安装配置clash的步骤，又能节省其他设备的系统资源。</p>
-<h2 id="正文-正文"><a href="#正文-正文" class="headerlink" title="正文 {正文}"></a>正文 {正文}</h2><h3 id="一、开启ssh-一、开启ssh"><a href="#一、开启ssh-一、开启ssh" class="headerlink" title="一、开启ssh {一、开启ssh}"></a>一、开启ssh {一、开启ssh}</h3><p>小米路由器的官网上没有提供小米路由器4C的开发版固件，所以要打开ssh只能另辟蹊径</p>
+        <h1 id="小米路由器4C安装clash实现XX上网"><a href="#小米路由器4C安装clash实现XX上网" class="headerlink" title="小米路由器4C安装clash实现XX上网"></a>小米路由器4C安装clash实现XX上网</h1><h2 id="目录-1"><a href="#目录-1" class="headerlink" title="目录 {1}"></a>目录 {1}</h2><p><a href="1">目录</a></p>
+<p><a href="2">前言</a></p>
+<p><a href="3">正文</a></p>
+<p><a href="3.1">一、开启ssh</a></p>
+<p><a href="3.2">二、登录root shell</a></p>
+<p><a href="3.3">三、安装ShellClash</a></p>
+<p><a href="3.4">四、使用ShellClash</a></p>
+<p><a href="4">结尾</a></p>
+<h2 id="前言-2"><a href="#前言-2" class="headerlink" title="前言 {2}"></a>前言 {2}</h2><p>虽然clash客户端很方便，但家里使用的办公与通信电子设备比较多，当有访问外网需求时，都需要在后台挂着clash，这让我想直接在路由器上实现XX上网，做到一劳永逸。既省去安装配置clash的步骤，又能节省其他设备的系统资源。</p>
+<h2 id="正文-3"><a href="#正文-3" class="headerlink" title="正文 {3}"></a>正文 {3}</h2><h3 id="一、开启ssh-3-1"><a href="#一、开启ssh-3-1" class="headerlink" title="一、开启ssh {3.1}"></a>一、开启ssh {3.1}</h3><p>小米路由器的官网上没有提供小米路由器4C的开发版固件，所以要打开ssh只能另辟蹊径</p>
 <p>github上有一个开源项目，实现了几款小米路由器的root shell: <a href="https://github.com/acecilia/OpenWRTInvasion" target="_blank" rel="noopener">https://github.com/acecilia/OpenWRTInvasion</a></p>
 <p>使用方法:</p>
 <p>在windows上安装python环境，然后在cmd上执行</p>
 <p><code>python remote_command_execution_vulnerability.py</code></p>
 <p>根据提示输入路由器地址，小米路由器的IP地址一般默认为192.168.31.1，路由器需要有联网的环境</p>
 <p>等待脚本执行完，即可登录root shell</p>
-<h3 id="二、登录root-shell-二、登录root-shell"><a href="#二、登录root-shell-二、登录root-shell" class="headerlink" title="二、登录root shell {二、登录root_shell}"></a>二、登录root shell {二、登录root_shell}</h3><p>要登录root shell，最好系统装有SSH连接工具，这里推荐putty，MobaXtern都很方便。</p>
+<h3 id="二、登录root-shell-3-2"><a href="#二、登录root-shell-3-2" class="headerlink" title="二、登录root shell {3.2}"></a>二、登录root shell {3.2}</h3><p>要登录root shell，最好系统装有SSH连接工具，这里推荐putty，MobaXtern都很方便。</p>
 <p>在创建一个session时，连接方式选择telnet，IP地址为路由器的地址，我这里输入小米路由器的默认地址192.168.31.1，port端口使用默认的23。打开session，用户名和密码都是root，依次输入<strong>实现登录</strong>。</p>
 <p>如果没有安装并且找不到这些软件，也可以在cmd输入 <code>telnet 路由IP</code> 进行登录，前提是在windows上开启的telnet</p>
 <p>我的电脑是windows11系统，开启步骤：</p>
 <p>设置-&gt;应用-&gt;可选功能-&gt;更多windows功能-&gt;勾选上“Telnet客户端”</p>
-<h3 id="三、安装ShellClash-三、安装ShellClash"><a href="#三、安装ShellClash-三、安装ShellClash" class="headerlink" title="三、安装ShellClash {三、安装ShellClash}"></a>三、安装ShellClash {三、安装ShellClash}</h3><p>shellclash也是github上的一个开源项目，可以通过管理脚本在Shell环境下便捷使用Clash</p>
+<h3 id="三、安装ShellClash-3-3"><a href="#三、安装ShellClash-3-3" class="headerlink" title="三、安装ShellClash {3.3}"></a>三、安装ShellClash {3.3}</h3><p>shellclash也是github上的一个开源项目，可以通过管理脚本在Shell环境下便捷使用Clash</p>
 <p>项目地址： <a href="https://github.com/juewuy/ShellClash" target="_blank" rel="noopener">https://github.com/juewuy/ShellClash</a></p>
 <p>项目的README上提供了安装方法</p>
 <p>小米路由器4C上的wget版本比较低，不支持https，所以采用的README上的http协议的链接安装</p>
@@ -210,14 +210,14 @@
 <p>执行命令安装完毕后，可以执行以下命令运行管理脚本</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clash #normal mode</span><br><span class="line">clash -h #help</span><br><span class="line">clash -u #uninstall</span><br><span class="line">clash -t #test mode</span><br></pre></td></tr></table></figure>
 
-<h3 id="四、使用ShellClash-四、使用ShellClash"><a href="#四、使用ShellClash-四、使用ShellClash" class="headerlink" title="四、使用ShellClash {四、使用ShellClash}"></a>四、使用ShellClash {四、使用ShellClash}</h3><p>在root shell上输入clash回车运行clash管理脚本</p>
+<h3 id="四、使用ShellClash-3-4"><a href="#四、使用ShellClash-3-4" class="headerlink" title="四、使用ShellClash {3.4}"></a>四、使用ShellClash {3.4}</h3><p>在root shell上输入clash回车运行clash管理脚本</p>
 <p>按照提示输入1，回车，启动/重启clash服务</p>
 <p>如果第一次使用，没有添加过配置，则需要按照提示导入配置文件</p>
 <p>输入1回车，然后粘贴上clash的订阅链接回车，即可在线生成clash配置文件</p>
 <p>这里要注意的是有的下载地址可能要能上外网才能访问，此时可能会遇到下载失败的情况</p>
 <p>这个链接里给出了常见问题的解决方案： <a href="https://juewuy.github.io/chang-jian-wen-ti/" target="_blank" rel="noopener">https://juewuy.github.io/chang-jian-wen-ti/</a></p>
 <p>关于在线生成配置文件失败或者导入订阅失败，上面给出了一个比较稳妥的方案，可以自己先下好配置文件，然后将配置文件上传到clash运行目录(在root shell 执行echo $clashdir可以得到路径)，将配置文件重命名为config.yaml即可正常使用。</p>
-<h2 id="结尾-结尾"><a href="#结尾-结尾" class="headerlink" title="结尾 {结尾}"></a>结尾 {结尾}</h2><p>然而小米路由器4C的性能太弱了，买的时候只是想够用就行，没想到后面有装clash的需求，结果装了clash以后路由器带不动了，运行clash以后CPU占用直接拉满，连接路由器的设备到两三台，一会儿直接爆内存，clash直接崩溃了，，</p>
+<h2 id="结尾-4"><a href="#结尾-4" class="headerlink" title="结尾 {4}"></a>结尾 {4}</h2><p>然而小米路由器4C的性能太弱了，买的时候只是想够用就行，没想到后面有装clash的需求，结果装了clash以后路由器带不动了，运行clash以后CPU占用直接拉满，连接路由器的设备到两三台，一会儿直接爆内存，clash直接崩溃了，，</p>
 <p>不用clash的话一定要进入运行管理脚本关闭服务，不然开启服务，clash又崩溃了，路由器会直接上不了网</p>
 <p>下次换个好点的路由器吧，，</p>
 
